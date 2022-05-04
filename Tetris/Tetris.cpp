@@ -602,10 +602,6 @@ void addSidePieceInnerBordersToVector(vector<GLfloat>& vertices, GLfloat x1, GLf
 }
 
 void addNextPiecesTo_nb_vao() {
-	glDeleteVertexArrays(1, &nb_vao);
-	glDeleteBuffers(1, &n_vbo);
-	glDeleteVertexArrays(1, &nbl_vao);
-	glDeleteBuffers(1, &nbl_vbo);
 	vector<GLfloat> nextBlockPoints;
 	vector<GLfloat> nextBlockLines;
 	for (int index = 0; index < 3; index++) {
@@ -711,10 +707,6 @@ void addNextPiecesTo_nb_vao() {
 }
 
 void addStoredPieceTo_nb_vao() {
-	glDeleteVertexArrays(1, &sb_vao);
-	glDeleteBuffers(1, &sb_vbo);
-	glDeleteVertexArrays(1, &sbl_vao);
-	glDeleteBuffers(1, &sbl_vbo);
 	vector<GLfloat> storedBlockPoints;
 	vector<GLfloat> storedBlockLines;
 
@@ -808,10 +800,6 @@ void addStoredPieceTo_nb_vao() {
 }
 
 void addBoardBlocksTo_vao() {
-	glDeleteVertexArrays(1, &mainBlock_vao);
-	glDeleteBuffers(1, &mainBlock_vbo);
-	glDeleteVertexArrays(1, &ghostBlock_vao);
-	glDeleteBuffers(1, &ghostBlock_vbo);
 	vector<GLfloat> blockPoints;
 	vector<GLfloat> ghostBlockPoints;
 	for (int i = 0; i < 20; i++) {
